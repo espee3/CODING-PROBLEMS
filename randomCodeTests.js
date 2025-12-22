@@ -1,0 +1,89 @@
+
+function isIsogram(str){
+    let wordArray = str.split("");
+
+    for (let i = 0; i < wordArray.length; i++) {
+        let pickedWord = wordArray.at(i).toLowerCase();
+
+        for (let j=i+1; j< wordArray.length; j++){
+            let currentWord = wordArray.at(j).toLowerCase();
+
+            if (pickedWord === currentWord){
+            return false;  
+            } 
+        }
+    }
+    return true;
+
+}
+
+isIsogram("Isogram");
+
+
+
+
+
+
+
+// let word = "Atari";
+// let wordArray = word.split("");
+// // console.table (wordarray);
+// // console.log (wordArray);
+
+// // console.log("position at 2:", wordArray.at(2));
+// // console.log("lenght of array", wordArray.length);
+
+// // start at 0; stop at 5; add 1 every time
+
+// for (let i = 0; i < wordArray.length; i++) {
+
+//     let pickedWord = wordArray.at(i).toLowerCase();
+
+//     for (let j=i+1; j< wordArray.length; j++){
+//         let currentWord = wordArray.at(j).toLowerCase();
+//         if (pickedWord === currentWord){
+//            // console.log( pickedWord, wordArray.at(j) );
+//            console.log("This is an Isogram")   
+//         }   else {
+//             console.log("This is not an isogram")
+//         }
+//     }
+// }
+
+
+
+
+
+
+
+
+
+
+// function checkUniqueness(arr) {
+//   // 1. Pick a word
+//   for (let i = 0; i < arr.length; i++) {
+//     let matchCount = 0;
+//     let currentWord = arr[i].toLowerCase();
+
+//     // 2. Compare it against every word in the list (including itself)
+//     for (let j = 0; j < arr.length; j++) {
+//       if (currentWord === arr[j].toLowerCase()) {
+//         matchCount++;
+//       }
+//     }
+
+//     // 3. If it appears more than once, we found a duplicate!
+//     if (matchCount > 1) {
+//       return `Found a duplicate: "${arr[i]}" appears ${matchCount} times.`;
+//     }
+    
+//     // 4. If matchCount is only 1, the loop continues to the next i automatically
+//     console.log(`"${arr[i]}" is unique so far, moving to next...`);
+//   }
+
+//   // 5. If the outer loop finishes completely
+//   return "Every word is unique in the list.";
+// }
+
+// const words = ["Apple", "Banana", "Cherry"];
+// console.log(checkUniqueness(words));
