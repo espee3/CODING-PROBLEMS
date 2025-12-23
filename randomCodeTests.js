@@ -96,17 +96,58 @@
 
 */
 
-function multiplyEverything(numbers) {
-    let total = 1;
+// function multiplyEverything(numbers) {
+//     let total = 1;
 
-    for (let i = 0; i < numbers.length; i++) {
-        total = total * numbers[i];
-        console.log(`Step ${i + 1}: Total is now ${total}`);
+//     for (let i = 0; i < numbers.length; i++) {
+//         total = total * numbers[i];
+//         console.log(`Step ${i + 1}: Total is now ${total}`);
+//     }
+
+//     console.log("Final Product:", total);
+//     return total;
+// }
+
+// multiplyEverything([2, 3, 4]); 
+// // Final Product: 24
+
+// truth = [];
+// truth.append = 3;
+// truth.pop =5;
+// console.table(truth);
+// console.log(truth);
+
+
+//SOLVING THE PERSISTENCE ISSUE
+   function persistence(num){    
+    let totalArray = [];    //thats that holds the persistence
+    number = num.toString().split("").map(Number);
+
+        while (number.length > 1) {
+            let total = 1;
+
+            for (let i = 0; i < number.length; i++){
+                total = total * number[i];
+                //totalArray.push(total);      
+            }
+        
+        totalArray.push(total);
+        number = total.toString().split("").map(Number);
+
+        }//while loop ends
+
+    let persistenceArray = totalArray;
+    
+    return {
+        "persistenceArray": persistenceArray,
     }
 
-    console.log("Final Product:", total);
-    return total;
-}
+    
+    }//persist function ends
 
-multiplyEverything([2, 3, 4]); 
-// Final Product: 24
+    let persist = persistence(999);
+    console.log(persist)
+
+
+
+
