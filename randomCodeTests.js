@@ -119,35 +119,77 @@
 
 
 //SOLVING THE PERSISTENCE ISSUE
-   function persistence(num){    
-    let totalArray = [];    //thats that holds the persistence
-    number = num.toString().split("").map(Number);
+//    function persistence(num){    
+//     let totalArray = [];    //thats that holds the persistence
+//     number = num.toString().split("").map(Number);
 
-        while (number.length > 1) {
-            let total = 1;
+//         while (number.length > 1) {
+//             let total = 1;
 
-            for (let i = 0; i < number.length; i++){
-                total = total * number[i];
-                //totalArray.push(total);      
-            }
+//             for (let i = 0; i < number.length; i++){
+//                 total = total * number[i];
+//                 //totalArray.push(total);      
+//             }
         
-        totalArray.push(total);
-        number = total.toString().split("").map(Number);
+//         totalArray.push(total);
+//         number = total.toString().split("").map(Number);
 
-        }//while loop ends
+//         }//while loop ends
 
-    let persistenceArray = totalArray;
+//     let persistenceArray = totalArray;
     
-    return {
-        "persistenceArray": persistenceArray,
-    }
+//     return {
+//         "persistenceArray": persistenceArray,
+//     }
 
     
-    }//persist function ends
+//     }//persist function ends
 
-    let persist = persistence(999);
-    console.log(persist)
+//     let persist = persistence(999);
+//     console.log(persist)
+
+// array = ["Andrew"];
+// function countArrayElement(element){
+//         elem = [];
+//         elem.push(element)
+//         element = element.split("");
+//         console.log(element)
+
+//     }
+// countArrayElement(array[0])
 
 
+    // function countArrayElement(element){
+    //     let elem = [];  //an array to push the elements into
+    //     let counted = [];
+    //     elem.push(element)
+    //     element = element.split("");    //splits it into individual letters and makes an array of
+    //     //console.log(element)
+    //     counted.push(element.length); //number of words per array of element
+    //     console.log(counted)
+    //     return counted;
+    // }
 
+    // array = ["Atari", "Agazi"];
+
+    // for (let i = 0; i < array.length; i ++){
+    // console.log(array[i])}
+
+    
+// function wordSpin(word) {
+//     allWords = [];
+//     let wordArray = [];
+//     let joinedArray = [];
+//     wordArray = word.toString().split(""); 
+//     for (i = wordArray.length - 1; i >= 0; i--){ // name: word Reversal loop
+//             joinedArray.push(wordArray[i]);
+//         }
+//         console.log("wordArray after loop", wordArray);
+//         console.log("joinedArray after loop", joinedArray);
+//     let joinedWord = joinedArray.join("");
+//     allWords.push(joinedWord); //as it joins the word, it pushes it to allWords
+//     console.log(allWords) 
+//     return allWords 
+// }
+// wordSpin("GOD IDS");
 

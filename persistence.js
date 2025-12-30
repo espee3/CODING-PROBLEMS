@@ -1,29 +1,27 @@
-function persistence (num){
+ function persistence(num){ 
+       
+    let totalArray = [];    //thats that holds the persistence
+    number = num.toString().split("").map(Number);
 
+        while (number.length > 1) {
+            let total = 1;
 
-    function persist(){
-
-        let total = 1;
-        let totalArray = [];
-
-        let number = num.toString();
-        number = number.split("").map(Number);
-        //console.log(number);
-
-        for (let i = 0; i < number.length; i++){
-            total = total * number[i];
-            console.log(total);
-            totalArray.push(total);
-            console.log(totalArray); 
-            return total
+            for (let i = 0; i < number.length; i++){
+                total = total * number[i];
+                //totalArray.push(total);      
+            }
         
-        }
+        totalArray.push(total);
+        number = total.toString().split("").map(Number);
+
+        }//while loop ends
+
+    let persistenceArray = totalArray;
+    
+    return {
+        "persistenceArray": persistenceArray,
     }
 
+    }//persist function ends
 
-
-
-
-}
-
-persistence(999);
+    let persist = persistence(999);
