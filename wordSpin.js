@@ -9,13 +9,12 @@ function spinWords (words) {
     }
     wordsArray = [];
     wordsArray = words.toString().split(" ");
-    spinWords = [];
     let allWords = [];
     
    for (let i=0; i<wordsArray.length; i++){
         countArrayElement(wordsArray[i]); //countArrayElement returns numbers bro an array of words      //loops and counts first array elements given to it
         let countedArrayElement = countArrayElement(wordsArray[i]);
-        if (countedArrayElement < 3){
+        if (countedArrayElement >= 5){
             function wordSpin(word) {
                     let wordArray = [];
                     let joinedArray = [];
@@ -43,8 +42,8 @@ function spinWords (words) {
             noWordSpin(wordsArray[i]);       
         }
    } //for loop ends
-    spinWords = allWords.join(" ");
-    console.log(spinWords)
+    spinner = allWords.join(" ");
+    console.log(spinner)
 }
 
-spinWords("All Might is Here")
+spinWords("Hey fellow warriors")
