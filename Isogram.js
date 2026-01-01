@@ -17,4 +17,7 @@ function isIsogram(str){
 
 }
 
-isIsogram("Isogram");
+let x = true;
+if (isIsogram("Isogram") == x){
+    console.log("true")
+}
