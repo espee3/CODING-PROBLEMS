@@ -193,3 +193,24 @@
 // }
 // wordSpin("GOD IDS");
 
+//counter
+// function counter() {
+//   let count = 0;
+//   return {
+//     increment() {
+//       count++;
+//       return count;
+//     },
+//     decrement() {
+//       count--;
+//       return count;
+//     },
+//     getCount() {
+//       return count;
+//     }
+//   };
+// }
+// const myCounter = counter();
+// myCounter.increment(); // 1
+// myCounter.increment(); // 2
+// myCounter.getCount(); // 2

@@ -13,7 +13,7 @@
         
         totalArray.push(total);
         number = total.toString().split("").map(Number);
-
+ 
         }//while loop ends
 
     let persistenceArray = totalArray;
