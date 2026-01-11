@@ -3,18 +3,14 @@ function XO(word){
     xFilter = stringArr.filter(sieve => sieve === "x")
     oFilter = stringArr.filter(sieve => sieve === "o")
    
-    if (stringArr.includes("x") && stringArr.includes("o") ){
-        if (xFilter.length === oFilter.length){
+    if (xFilter.length === oFilter.length){
+        console.log("true")
             return true
-        }
-        else { return false}  
-    } else{
-        return true
-    }
-
+        } else {
+            console.log("false")
+            return false}
 }
-
-XO("123xxoo")
+XO("")
 
 
 
@@ -27,8 +23,3 @@ XO("123xxoo")
 // XO("ooxXm") => true
 // XO("zpzpzpp") => true // when no 'x' and 'o' is present should return true
 // XO("zzoo") => false
-
-// a function that increases count everytime it is called
-
-
- //

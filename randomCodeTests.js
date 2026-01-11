@@ -214,3 +214,26 @@
 // myCounter.increment(); // 1
 // myCounter.increment(); // 2
 // myCounter.getCount(); // 2
+
+    // if (stringArr.includes("x") && stringArr.includes("o") ){
+    //     if (xFilter.length === oFilter.length){
+    //         return true
+    //     }
+    //     else { return false}  
+    // } else if(!stringArr.includes("x") && !stringArr.includes("o")){
+    //     return false
+    // }
+
+  //object counter frequency map  
+// const books = [
+//   { title: "The Hobbit", pages: 300, read: true },
+//   { title: "Atomic Habits", pages: 250, read: false },
+//   { title: "JavaScript Basics", pages: 100, read: true },
+//   { title: "Deep Work", pages: 200, read: false }
+// ];
+
+// // 1. .filter() - The "Security Guard" 
+// // It keeps only the books that pass the test (in this case, unread books).
+// const unreadBooks = books.filter(book => book.read === false);
+
+// console.log(unreadBooks)
