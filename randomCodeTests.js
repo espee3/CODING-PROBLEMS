@@ -237,3 +237,277 @@
 // const unreadBooks = books.filter(book => book.read === false);
 
 // console.log(unreadBooks)
+// let votes = ["Apple", "Banana", "Apple", "Apple", "Banana"];
+// let tally = {};
+// let count = 0;
+
+// for (let contestants of votes){
+//     if (tally[contestants] === undefined){
+//         // console.log(tally[contestants])
+//         tally[contestants] = 1
+//     }
+//     else {
+//         tally[contestants] = tally[contestants] + 1
+//     }
+//         console.log(tally[contestants])
+// }
+// console.log( `${tally} contestants`)
+
+
+//function getItem(item){
+//     let menu = {
+//     "Apple": 2,
+//     "Banana": 1,
+//     "Cherry": 5}; 
+
+//     if (menu[item] !== undefined){
+//         console.log(menu[item])
+//     }
+// }
+// getItem("Apple")
+
+
+// let basket = ["Apple", "Banana", "Apple", "Cherry", "Apple"];
+// let counts = {};
+
+// for (let fruit of basket) { ///magic line
+//     if (counts[fruit] === undefined) {
+//         counts[fruit] = 1
+//     } else {
+//         counts[fruit]++
+//     }
+// }
+
+// console.log(counts); // Target: { "Apple": 3, "Banana": 1, "Cherry": 1 }
+
+// function spinWords (words) {
+//     function countArrayElement(element){
+//         let elem = [];  //an array to push the elements into
+//         let counted = [];
+//         elem.push(element)
+//         element = element.split("");    //splits it into individual letters and makes an array of
+//         //console.log(element)
+//         counted.push(element.length); //number of words per array of element
+//         //console.log(counted)
+//         return counted;
+//     }
+//     wordsArray = [];
+//     wordsArray = words.toString().split(" ");
+//     spinWords = [];
+//     let allWordsArray = [];
+//     let allWords = [];
+    
+// function counter() {
+//   let count = 0;
+//   return {
+//     increment() {
+//       count = count+1;
+//       return count;
+//     },
+//     decrement() {
+//       count--;
+//       return count;
+//     },
+//     getCount() {
+//       return count;
+//     }
+//   };
+// }
+// const myCounter = counter();
+
+// myCounter.increment(); // 1
+// myCounter.increment(); // 2
+// myCounter.getCount(); // 2
+
+// //i'm getting my output starting from 3-9(7 digits), instead of 1, why oh gemini //difference btw count ++ and count +1 and count +=1 //what if i wanted to do a count +2 and not count++
+// for (let i = 0; i<7; i++){
+//     console.log(myCounter.increment())
+// }
+
+// let counter = 0
+// function increment(){
+// //counter = 0
+// counter ++
+// console.log(counter)
+// return counter
+// }
+
+// increment()
+// increment()
+
+// array = [1,2,3,4,1,1,1]
+
+// function count(value, target){
+//     let stringArr = value
+//     let count = 0
+    
+//     for (let i = 0; i < stringArr.length; i++){
+//     if (stringArr[i] === target){
+//         count ++
+//     }
+// }
+// console.log (count)
+// return count
+    
+// }
+// count(array, 1)
+
+
+// const scores = [80, 90, 100];
+
+// const totalScore = scores.reduce((total, currentScore) => {
+//     return total + currentScore;
+// }, 0); // We start at 0 for addition
+
+// console.log(totalScore); // 270
+// function Person(name, age) {
+//  this.name = name;
+//  this.age = age;
+//  this.greet = function() {
+//  console.log(`Hello, my name is ${this.name}`);
+//  };
+// }
+// const john = new Person('John', 30);
+
+//  if (i === array.length){
+//             console.log("array.length: ", array.length, "IF STATEMENT Array Value", array.at(array.length))
+//             console.log(tempArrayEven.push(array.at(-2)))
+//         }
+//         tempArrayEven.push(minimum)
+
+//         console.log("MINIMUM", minimum, "ARRAY AT -2:", array.at(-2))
+//         console.log("array:", tempArrayEven)
+
+
+//         // if (array.length % 2 !== 0){
+//         //     for (i=0; i<array.length-1; i++){
+//         //         let minimum =  min(array.at(i), array.at(i+1))
+//         //         tempArrayOdd.push(minimum)
+//         //         // console.log(minimum)  
+//         //         console.log(tempArrayOdd.length) 
+//         //     }
+            
+//         //     tempArrayOdd.push(array.at(-1))
+//         //     console.log(tempArrayOdd)
+//         // } else {
+//         //     let minimum =  min(array.at(i), array.at(i+1))
+//         //     console.log(minimum)
+//         //     tempArrayEven.push(minimum)
+//         //     console.log("Even Array: ",tempArrayEven.push(minimum))
+//         // }
+
+
+// //SORTING ALGORITHM - NOT WORKING THOUGH
+// let arrNum = [1,3,1,5,4]
+// arrNumFunc = [...arrNum]
+// //Write a Sorting ALgorithm
+// function min(num1, num2){
+//     if (num1 <= num2){
+//         return num1
+//     } else {
+//         return num2
+//     }
+// }
+// function swapArrayElem(array, x, y){
+//     let temp = array[x]
+//     array[x] = array[y]
+//     array[y] = temp
+// }
+// function sort(array){
+//     sortedItems = []
+//     console.log("original array: ", array)
+//     // console.log("MUTATED ARRAY: ", array) array.at(i)
+
+//     for (let i=0; i<array.length; i++){
+//         if (array.at(i+1) === min(array.at(i), array.at(i+1))){
+//             sortedItems.push(min(array.at(i), array.at(i+1)))
+//             swapArrayElem(array, array[i], array[i+1])
+//         }
+//         else {   
+//             sortedItems.push(min(array.at(i), array.at(i+1)))
+//         } 
+//     }
+
+//     console.log(sortedItems)
+// }
+
+// sort(arrNumFunc)
+
+//A SUCCESSFUL BUBLE SORT ALGORITHM/CODE
+// function sort(array){
+//     sortedItems = []
+//     console.log("original array: ", array)
+//    { 
+//     let swapper = true;
+//     while(swapper){
+//         swapper = false;
+//         for (let j=0; j<array.length; j++){
+//             if (array.at(j) > array.at(j+1)){
+//                 swapArrayElem(array, j, j+1);
+//                 swapper = true;
+//             }
+//         }
+//     }               
+//    }
+// }
+// sort(arrNumFunc)
+
+// SORT ARRAY DONE AND DUSTED
+// let arrNum = [2,3,1,4,9]
+// arrNumFunc = [...arrNum]
+// function sort(array){
+//    //SORTING ALGORITHM - NOT WORKING THOUGH
+// //Write a Sorting ALgorithm
+// function min(num1, num2){
+//     if (num1 <= num2){
+//         return num1
+//     } else {
+//         return num2
+//     }
+// }
+// function swapArrayElem(array, x, y){
+//     let temp = array[x]
+//     array[x] = array[y]
+//     array[y] = temp
+// } 
+
+//     sortedItems = []
+//    { 
+//     let swapper = true;
+//     while(swapper){
+//         swapper = false;
+//         for (let j=0; j<array.length; j++){
+//             if (array.at(j) > array.at(j+1)){
+//                 swapArrayElem(array, j, j+1);
+//                 swapper = true;
+//             }
+//         }
+//     }               
+//    }
+// }
+// sort(arrNumFunc)
+
+// --- CLASS CREATION ---
+/**
+ * class Car {
+  constructor(name, year) {
+    this.name = name;
+    this.year = year;
+
+  }
+  age() {
+    const date = new Date();
+    return date.getFullYear() - this.year;
+  }
+}
+
+const myCar = new Car("Ford", 2014);
+console.log(`my car is ${myCar.age()} years old `)
+ **/
+
+
+
+
+
+
+

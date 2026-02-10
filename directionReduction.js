@@ -32,7 +32,8 @@ function dirReduc(arr) {
         'WEST': 'EAST'
     };
 
-    return arr.reduce((stack, current) => {
+    return arr.reduce(//start
+        (stack, current) => {
         const last = stack[stack.length - 1];
         
         // If the stack isn't empty and the last item is the opposite of current
@@ -43,7 +44,38 @@ function dirReduc(arr) {
         }
         console.log(stack)
         return stack;
-    }, []);
+    }, []
+);
 }
 
 dirReduc(arr1)
+
+
+//USING THE FOREACH METHOD
+let arr2 = ["NORTH", "SOUTH", "EAST", "WEST", "WEST"];
+
+function dirReduc(arr) {
+    const opposites = {
+        'NORTH': 'SOUTH',
+        'SOUTH': 'NORTH',
+        'EAST': 'WEST',
+        'WEST': 'EAST'
+    };
+
+    const stack = [];
+
+    for (const current of arr) {
+        const last = stack[stack.length - 1];
+        
+        if (stack.length > 0 && last === opposites[current]) {
+            stack.pop(); // cancel out opposite directions
+        } else {
+            stack.push(current); // keep the direction
+        }
+        console.log(stack); // show progress
+    }
+
+    return stack;
+}
+
+console.log(dirReduc(arr2)); // ["WEST"]
